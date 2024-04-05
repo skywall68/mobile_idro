@@ -1,0 +1,50 @@
+.bodyCompilatore {
+    
+    
+    background-color: rgb(243, 243, 237);
+    margin:10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Aggiungi ombra al lato destro e in basso */
+    
+}
+
+.header {
+  display: flex;
+}
+
+p {
+  margin: 5px;
+}
+
+.calendario {
+  margin-top: auto;
+  background-color: blueviolet;
+
+}
+.controllo {
+  display: flex;
+  margin-left: 15px;
+}
+
+h3 {
+  margin-left: 15px;
+  margin-top:-1px;
+}
+
+
+
+.tabella {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  th {
+    background-color: #bfbfbf;
+  }
+  

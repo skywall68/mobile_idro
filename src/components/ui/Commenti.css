@@ -1,0 +1,17 @@
+.Commenti {
+    
+    background-color: antiquewhite;
+    margin: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Aggiungi ombra al lato destro e in basso */
+   }
+   
+   .commentibody {
+       display: flex;
+       flex-direction: column;
+       margin:5px;
+   }
+   
+   .inputCommenti {
+       width: 100px;
+       text-align: center;
+   }

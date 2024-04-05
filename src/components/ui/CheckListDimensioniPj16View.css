@@ -1,0 +1,28 @@
+.checklist_dimensioni {
+    background-color: rgb(249, 6, 6);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Aggiungi ombra al lato destro e in basso */
+}
+
+.bottone_check_list {
+ 
+    margin-top: 20px;
+    background-color: rgb(249, 141, 9);
+    height: 40px;
+}
+
+.tabella {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    border: 1px solid #0c0b0b;
+    padding: 8px;
+    text-align: left;
+    font-size: 14px;
+  }
+  
+  th {
+    background-color: #f1d847;
+  }

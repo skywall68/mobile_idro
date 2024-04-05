@@ -1,0 +1,18 @@
+1° installa react
+ npx create-react-app readpdf3
+
+2° installa react-pdf 
+npm install react-pdf
+
+3° installa calendario
+npm install react-datepicker  per la data
+
+4°
+npm install @mui/material @emotion/react @emotion/styled   per i materiali
+
+5°
+npm install --save pdf-lib  (info:https://pdf-lib.js.org/#install) x modificare pdf
+6°
+npm i file-saver (info: https://www.npmjs.com/package/file-saver) x salvare i file direttamente
+
+7° npm i xlsx

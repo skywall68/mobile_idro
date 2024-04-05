@@ -1,0 +1,11 @@
+.ElementiSaldati {
+    background-color: bisque;
+    margin:15px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Aggiungi ombra al lato destro e in basso */
+}
+
+.elementi_select {
+    margin-right: 10px;
+    font-size: 15px;
+    text-align: center;
+}

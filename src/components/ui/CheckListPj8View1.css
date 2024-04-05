@@ -1,0 +1,25 @@
+.checklistPj8 {
+    background-color: rgb(138, 253, 6);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Aggiungi ombra al lato destro e in basso */
+}
+
+
+.bottone {
+ 
+    margin-top: 20px;
+    background-color: bisque;
+    height: 40px;
+}
+
+.tabellapj8 {
+    margin-top: 10px;
+    background-color: bisque;
+}
+
+.pj8 tr:nth-child(even){
+    background-color: #dbdada;
+}
+
+.pj8 tr:nth-child(odd){
+    background-color: #F0F0F0;
+}

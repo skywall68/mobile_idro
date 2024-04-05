@@ -1,0 +1,36 @@
+.checklist_dimensioni {
+    background-color: rgb(172, 172, 168);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Aggiungi ombra al lato destro e in basso */
+}
+
+.bottone_check_list {
+ 
+    margin-top: 20px;
+    background-color: bisque;
+    height: 40px;
+}
+
+.tabellapj8 {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    border: 1px solid #0c0b0b;
+    padding: 8px;
+    text-align: left;
+    font-size: 14px;
+  }
+  
+  th {
+    background-color: #eceed7;
+  }
+
+  .pj8 tr:nth-child(even){
+    background-color: #dbdada;
+}
+
+.pj8 tr:nth-child(odd){
+    background-color: #F0F0F0;
+}

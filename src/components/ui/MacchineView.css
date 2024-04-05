@@ -1,0 +1,45 @@
+.containerMacchine {
+    
+    background-color: rgb(171, 170, 168);
+    justify-content: center;
+    
+    margin:10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Aggiungi ombra al lato destro e in basso */
+} 
+
+.containerMacchineCH {
+    display: flex;
+    background-color: rgb(229, 229, 226);
+    justify-content: center;
+    margin:5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Aggiungi ombra al lato destro e in basso */
+} 
+.containerMacchinePanier {
+    display: flex;
+    background-color: rgb(247, 243, 158);
+    justify-content: center;
+    margin:5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Aggiungi ombra al lato destro e in basso */
+} 
+
+
+.select_macchine {
+    margin: 20px;
+    font-size: 20px;
+    text-align: center;
+
+}
+
+.select_macchineCH {
+    margin: 20px;
+    font-size: 25px;
+    text-align: center;
+
+}
+.select_macchinePanier {
+    margin: 20px;
+    font-size: 20px;
+    text-align: center;
+
+}
+

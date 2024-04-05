@@ -1,0 +1,20 @@
+.containerCheckListCHView {
+   display: flex;
+   justify-content: center;
+    background-color: rgb(228, 227, 226);
+    margin:10px;
+    
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Aggiungi ombra al lato destro e in basso */
+}
+.bottoneCH {
+    background-color: rgb(201, 196, 195);
+    height: 40px;
+}
+
+.tabellaCH {
+    
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;    
+
+}

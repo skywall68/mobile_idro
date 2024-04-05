@@ -1,0 +1,10 @@
+ho fatto la prima parte del modulo pj8 dove mi deve poi visualizzare la tabella con le voci della prima pagina
+DA ChecklistPj8 scelgo il file, i valori vengono dentro Impostazioni per poi andare su App.js e da li vanno poi in ChecklistPj8View1
+per visualizzarmi la prima parte della tabella, 
+Vado poi a prendere i dati e su ChecklistPj8View1 mi crea la tabella
+devo ripetere per la seconda pagina pj8, tutto da ripetere per Pj16  FATTO
+
+ho completato la prima parte adesso devo continuare nella seconda parte con.
+- n#1 elemento di (viene memorizzato nella App.js) FATTO
+- ho aggiunto elenco elementi ACF
+- creare le due tabelle pj8 e pj16 pagina 1 le prendo da local storage

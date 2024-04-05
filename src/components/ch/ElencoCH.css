@@ -1,0 +1,13 @@
+.containerListaCH {
+    display: flex;
+    background-color: rgb(155, 155, 155);
+    justify-content: center;
+    margin:20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Aggiungi ombra al lato destro e in basso */
+}
+
+.selectCH {
+    font-size: 25px;
+    text-align: center;
+    margin: 20px;
+}

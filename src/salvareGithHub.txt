@@ -1,0 +1,15 @@
+"6° salvare il codice su github:
+ -crea un nuovo progetto chiamato pj8
+ -vai sul tasto in alto <code> e sotto https copia il url:
+ - https://github.com/skywall68/pj8.git
+ - su terminal git bash dentro il progetto: readpdf2 scriviamo:
+ git clone https://github.com/skywall68/pj8.git
+ mi ha creato la cartella pj8
+ -dentro la cartella metti tutto quello che vuoi recuperare o che si aggiornano.(  LA CARTELLA node_modules si inserisce da sola quando fai partire il programma)
+ -dentro la directory (main) possiamo vedere tutti i files con il comando: ls
+ -vediamo i file colore rosso perchè devono essere ancora copiati, usiamo comando: git status
+ -per aggiungerli in memoria per essere POI mandati sul server scriviamo: git add nome del file oppure git . (tutti i files)
+ -per confermare tutto scriviamo: git commit -m "messaggio che vogliamo inserire OBBLIGATORIO"
+ -mandiamo i files nel server: git push
+ PER RIMUOVERE DETERMINATI FILE: git rm --cached GIANT_FILE  -r
+ PER TORNARE INDIETRO ALLA FASE PRECEDENTE: git stash

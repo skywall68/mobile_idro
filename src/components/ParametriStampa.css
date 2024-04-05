@@ -1,0 +1,47 @@
+.containerParametriStampa {
+  background-color: rgb(147, 145, 145);
+
+}
+
+.containerParametriStampaGreen {
+    background-color: chartreuse;
+}
+
+
+/* Stili personalizzati per l'input file */
+input[type="file"] {
+    /* Aggiungi qui i tuoi stili personalizzati */
+    padding: 10px;
+    background-color: #11d3ed;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    color: #f1f1eb;
+    font-size: 14px;
+    /* Aggiungi altri stili desiderati */
+  }
+  
+  /* Stili per quando l'input file ha il focus */
+  input[type="file"]:focus {
+    /* Aggiungi qui gli stili per il focus */
+    cursor:pointer;
+    outline: none; /* Rimuove l'outline di default */
+    border-color: #007bff; /* Cambia il colore del bordo quando l'input ha il focus */
+  }
+
+  #customFileInput {
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #3e3d3d;
+    border-radius: 5px;
+    color: #333;
+    font-size: 16px;
+    cursor: pointer; /* Cambia il cursore del mouse */
+  }
+  
+  /* Stili per quando l'elemento ha il focus */
+  #customFileInput:focus {
+    outline: none; /* Rimuove l'outline di default */
+  }
+  
+ 
+  

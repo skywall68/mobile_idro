@@ -1,0 +1,46 @@
+.containerData {
+    background-color: #dbdad5;
+    justify-content: center;
+    margin:10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Aggiungi ombra al lato destro e in basso */
+}
+
+.containerDataCH {
+    display: flex;
+    background-color: #dbdad5;
+    justify-content: center;
+    
+    margin:20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Aggiungi ombra al lato destro e in basso */
+}
+.containerDataPanier {
+    display: flex;
+    background-color: #dbdad5;
+    justify-content: center;
+    
+    margin:20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Aggiungi ombra al lato destro e in basso */
+}
+
+
+h2 {
+    text-align: center;
+}
+
+.inputBoxCH {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 400;
+    margin: 20px;
+}
+.inputBoxPanier {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 400;
+    margin: 20px;
+}
+
+.inputBox {
+    font-size: 15px;
+    margin: 5px;
+}

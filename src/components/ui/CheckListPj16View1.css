@@ -1,0 +1,37 @@
+.checklistPj16 {
+    background-color: rgb(122, 120, 120);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Aggiungi ombra al lato destro e in basso */
+}
+
+.pj16 tr:nth-child(even){
+    background-color: #dbdada;
+}
+
+.pj16 tr:nth-child(odd){
+    background-color: #F0F0F0;
+}
+
+th {
+    background-color: #a18900;
+}
+
+
+    
+    
+   
+    
+
+
+.bottone {
+ 
+    margin-top: 20px;
+    background-color: rgb(245, 236, 225);
+    height: 40px;
+}
+
+.tabella {
+    margin-top: 10px;
+}
+td {
+    font-weight: 600;
+}
