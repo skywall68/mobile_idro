@@ -1,11 +1,17 @@
 .footer {
-    background-color: rgb(223, 255, 127);
+  
+  text-align: center; /* Centra il contenuto orizzontalmente */
+    background-color: rgb(110, 110, 109);
+    margin-top:30px;
+    margin-bottom: 100px; /* Sostituisci con il valore desiderato per eliminare lo spazio tra le pagine */
 }
 
 .button-container-conferma {
-    display: flex;
-    justify-content: space-between; /* Adjust as needed */
-    margin-top: 10px; /* Optional: Add margin for spacing */
+   background-color: rgb(9, 58, 236);
+    color: aliceblue;
+    font-weight: 800;
+    padding: 50px 50px; /* Padding per aggiungere spazio intorno al pulsante */
+    margin: 30px 20px; /* Margin per aggiungere spazio tra i pulsanti */
   }
 .button-container-stampa {
     display: flex;
@@ -13,5 +19,6 @@
     
     
   }
+  
 
   

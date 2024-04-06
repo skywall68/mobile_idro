@@ -1,7 +1,8 @@
 .containerOperatore {
+    display: grid;
     background-color:#dbdad5;
-    margin:5px ;
-    
+    margin:5px 100px ;
+    justify-content: center;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Aggiungi ombra al lato destro e in basso */
 }
 h2 {
@@ -40,5 +41,6 @@ h2 {
     font-size: 15px;
     font-weight: 200;
     margin: 17px;
+    border: 1px solid #f30909; /* Bordo delle opzioni */
     
 }

@@ -375,23 +375,19 @@ function App() {
        {/* Colonna sinistra: PDF */}
           
             {visualizzaModulo ?
-             <div style={{display:'flex'}} >
-              <div className='pdf' style={{flex:1}}>
+             <div style={{display:'grid'}} >
+              <div className='pdf' style={{}}>
                 
                 {seePdf}
                 </div>
               <div style={{
-                  width:'60%',
-                  position:'sticky', 
-                  top:'0', 
-                  height: '100vh', 
-                  overflow:'auto',
+                  
                   }}>    
                   
                   {compilatore}
                   <h2>{appOperatore}</h2>
-                  <h2>ultima lista stampata:{appRecuperaMiaLista}</h2>
-                  <h2>Data controllo:{appData}</h2>
+                  
+                 
                     <div className='contenitore'>
                       {data}
                       {operatore}
@@ -431,7 +427,7 @@ function App() {
             {checkListPanierDimensioniView}
             {footer}
           </div>
-           :<p>&copy;2024 WM ver: 0.0.3</p>
+           :<p>&copy;2024 WM ver: 0.0.1</p>
             }
             
        

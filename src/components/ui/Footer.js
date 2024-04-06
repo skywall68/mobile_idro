@@ -504,10 +504,11 @@ console.log('dentro footer, la pagina listaPagina2Pj16App:',listaPagina2Pj16App)
         </div>
       </Modal >
       <div className='footer'>
-        <div className="button-container-conferma">
-              <Tasto onClick={handleCancel} label="CANCEL"/>
-              <Tasto onClick={openModalPrintHandler} label="CONFERMA"/>
-          </div>
+        
+              <button className='button-container-conferma'  onClick={handleCancel}>CANCELLA</button>
+             
+              <button className='button-container-conferma'  onClick={openModalPrintHandler}>CONFERMA</button>
+         
       </div>
     </React.Fragment>
 

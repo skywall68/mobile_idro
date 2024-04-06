@@ -46,25 +46,26 @@ const SeePdf = ({
   };
   //modifichiamo lo stile del pdf
   const pdfStyles = {
-    display: 'flex',
-    flexDirection: 'column',
-    marginTop:'10px',
+    // display: 'flex',
+    // flexDirection: 'column',
+    // marginTop:'50px',
+    // justifyContent: 'center'
     };
     //++++++++++++RECUPERO EVENTUALE DATA++++++++++++++++++++++++++++++++
-    let dataLista="";
-    dataLista=RecuperaData(lista)
-    if(dataLista!==""){
-      //setAppData(dataLista)
-      console.log('e la lista è:',lista,' la data della lista è:',dataLista)
-    }else {
-      dataLista=""
-       //setAppData(dataLista)
-      console.log('e la lista è:',lista,' la data della lista è:',dataLista)
-    }
+    // let dataLista="";
+    // dataLista=RecuperaData(lista)
+    // if(dataLista!==""){
+    //   //setAppData(dataLista)
+    //   console.log('e la lista è:',lista,' la data della lista è:',dataLista)
+    // }else {
+    //   dataLista=""
+    //    //setAppData(dataLista)
+    //   console.log('e la lista è:',lista,' la data della lista è:',dataLista)
+    // }
 
-    useEffect(()=>{
-      setAppData(dataLista)
-    },[dataLista])
+    // useEffect(()=>{
+    //   setAppData(dataLista)
+    // },[dataLista])
   //*********RECUPERO DATI CLIENTE**************************************** */
   const recuperaDatiCliente = async (npagine) => {
   try {
@@ -208,8 +209,8 @@ const SeePdf = ({
   };
   return (
     <div className='pdf-container'>
-       <label htmlFor="fileInput">Seleziona un file liste:</label>
-      <input type="file" accept=".pdf" onChange={handleFileChange} style={{marginTop:'40px', marginLeft:'50%'}} />
+       <label htmlFor="fileInput"><h2>Seleziona un file liste:</h2></label>
+      <input type="file" accept=".pdf" onChange={handleFileChange} style={{marginTop:'40px'}} />
         {pdfPath && (
             <div  style={pdfStyles}>
               

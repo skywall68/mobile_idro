@@ -1,7 +1,8 @@
 .containerData {
+    display: grid;
     background-color: #dbdad5;
     justify-content: center;
-    margin:10px;
+    margin:5px 100px ;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Aggiungi ombra al lato destro e in basso */
 }
 
@@ -43,4 +44,12 @@ h2 {
 .inputBox {
     font-size: 15px;
     margin: 5px;
+    text-align: center;
+    margin: 20px;
 }
+input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #f30909; /* Bordo delle opzioni */
+  }

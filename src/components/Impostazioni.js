@@ -115,7 +115,7 @@ const Impostazioni = ({
     elencoSaldatori= <ElencoSaldatori setSelectMacchineOrsaldatori={setSelectMacchineOrsaldatori}/>
     checklistPj8= <CheckListPj8 setSelectedPj8OrPj16={setSelectedPj8OrPj16} /> 
     elencoTipologia = <ElencoTipologia setSelectTipologia={setSelectTipologia} />
-    planning=<Planning />
+    // planning=<Planning />
     
   } else if (selectedFile === 'PJ 16 - rev 2 - IT.pdf'){
     parametriStampa=<ParametriStampa setSelectedParametriStampa={setSelectedParametriStampa} selectedFile={selectedFile} />
@@ -123,7 +123,7 @@ const Impostazioni = ({
     elencoMacchine= <ElencoMacchine setSelectMacchineOrsaldatori={setSelectMacchineOrsaldatori} />
     checlistpj16=<CheckListPj16 setSelectedPj8OrPj16={setSelectedPj8OrPj16} />
     elencoTipologia = <ElencoTipologia setSelectTipologia={setSelectTipologia} />
-    planning=<Planning />
+    // planning=<Planning />
   } else if (selectedFile === 'PJ 8 - rev 6 - CH.pdf'){
     parametriStampa=<ParametriStampa setSelectedParametriStampa={setSelectedParametriStampa} selectedFile={selectedFile} />
     elencoAzioni=<ElencoAzioni setSelectMacchineOrsaldatori={setSelectMacchineOrsaldatori} />
@@ -157,7 +157,7 @@ const Impostazioni = ({
    
       <div style={{backgroundColor:'lightgrey'}}>
         <ScegliPjPDF setPjPdf={setPjPdf} setSelectedFile={setSelectedFile} />
-        {planning}
+        {/* {planning} */}
         {parametriStampa}
         {elencoSaldatori}
         {elencoMacchine}
