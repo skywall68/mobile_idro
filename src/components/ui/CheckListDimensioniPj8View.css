@@ -1,6 +1,11 @@
 .checklist_dimensioni {
-    background-color: rgb(172, 172, 168);
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Aggiungi ombra al lato destro e in basso */
+  display:flex;
+  flex-direction: column; /* Per allineare i contenuti verticalmente */
+  justify-content: center; /* Centra verticalmente */
+  align-items: center; /* Centra orizzontalmente */
+  background-color: rgb(215, 248, 177);
+  margin:10px 100px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Aggiungi ombra al lato destro e in basso */
 }
 
 .bottone_check_list {
@@ -13,11 +18,11 @@
 .tabellapj8 {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    margin-top: 10px;
   }
   
   th, td {
-    border: 1px solid #0c0b0b;
+    border: 2px solid #0c0b0b;
     padding: 8px;
     text-align: left;
     font-size: 14px;

@@ -44,7 +44,7 @@ const ElencoCHView = ({setAppElementoCHScelto}) => {
     <div className='containerListaCH'>
       <h2>Elenco CH:</h2>
       
-      <select className='selectCH' onChange={handleSelectChange}  >
+      <select className='elencoCH' onChange={handleSelectChange}  >
       {elencoCH.map((elenco, index)=>(
          <option key={index} value={elenco}>
           {elenco}

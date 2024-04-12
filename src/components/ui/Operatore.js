@@ -14,12 +14,13 @@ const Operatore = ({setAppOperatore,sceltaModuloApp}) => {
     <div className={sceltaModuloApp ==='ch' ?'containerOperatoreCH':
     sceltaModuloApp ==='panier' ?'containerOperatorePanier':
     'containerOperatore'}>
-        <h2>Operatore:</h2>
+        <label htmlFor="operatore"><h2>Operatore</h2></label>
         <input
         className={sceltaModuloApp ==='ch' ?'inputBoxOperatoreCH':
         sceltaModuloApp ==='panier' ?'inputBoxOperatorePanier':
         'inputBoxOperatore'}
         type='text'
+        id="operatore"
         onChange={handleInputChange}
          />
     </div>

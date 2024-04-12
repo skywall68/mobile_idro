@@ -381,7 +381,7 @@ function App() {
                 {seePdf}
                 </div>
               <div style={{
-                  
+                   overflowX: "hidden"
                   }}>    
                   
                   {compilatore}

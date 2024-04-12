@@ -144,7 +144,7 @@ const CheckListDimensioniPj16View = ({setListaPagina2Pj16App,appPulisciCampo,set
                         <td>
                           <label>
                              <input
-                               id="myCheckbox"
+                               id={`${index}`}
                                type="checkbox"
                                name="Conforme"
                                value="true"

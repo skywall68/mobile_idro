@@ -1,36 +1,43 @@
 .containerMacchine {
-    
-    background-color: rgb(171, 170, 168);
+    display: grid;
+    margin:5px 100px ;
+    /* background-color: rgb(171, 170, 168); */
     justify-content: center;
-    
+    background-image: linear-gradient(to bottom, #f9d404, #04040465);
     margin:10px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Aggiungi ombra al lato destro e in basso */
-} 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    width: 100%;
+}
 
-.containerMacchineCH {
+/* .containerMacchineCH {
     display: flex;
-    background-color: rgb(229, 229, 226);
+    background-image: linear-gradient(to bottom, #f9d404, #04040465);
     justify-content: center;
     margin:5px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Aggiungi ombra al lato destro e in basso */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); 
 } 
 .containerMacchinePanier {
     display: flex;
     background-color: rgb(247, 243, 158);
     justify-content: center;
     margin:5px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Aggiungi ombra al lato destro e in basso */
-} 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+} */
 
 
-.select_macchine {
-    margin: 20px;
+.elencoMacchine {
+    margin: 5px;
     font-size: 20px;
     text-align: center;
+    font-weight: 200px;
+    width: 300px; /* Larghezza del select */
+    padding: 10px; /* Spazio interno delle opzioni */
+    border-radius: 5px; /* Bordo arrotondato delle opzioni */
+   border: 1px solid #f30909; /* Bordo delle opzioni */
 
 }
 
-.select_macchineCH {
+/* .select_macchineCH {
     margin: 20px;
     font-size: 25px;
     text-align: center;
@@ -41,5 +48,5 @@
     font-size: 20px;
     text-align: center;
 
-}
+} */
 

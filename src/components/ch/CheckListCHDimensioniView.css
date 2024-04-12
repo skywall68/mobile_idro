@@ -1,12 +1,16 @@
 .containerCheckListCHDimensioni {
-    background-color: rgb(250, 226, 189);
-    margin:20px;
+  display: grid;
+    
+  background-color: #dcbe0f;
+  justify-content: center;
+  
+  margin:10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 .bottone_check_list {
  
-    margin-top: 20px;
-    background-color: bisque;
-    height: 40px;
+  background-color:#dcbe0f;
+  height: 40px;
 }
 
 .tabella {

@@ -97,7 +97,7 @@ const closeModalMio =()=>{
       <button onClick={handleToggleTabella}>
       {mostraTabella ? 'O' : 'V'}
       </button>
-      <h2 style={{marginTop:'-20px', backgroundColor:'lightgrey'}}>Controlli</h2>
+      {/* <h2 style={{marginTop:'-20px', backgroundColor:'lightgrey'}}>Controlli</h2> */}
      </div>
      <div>
      {mostraTabella && ( 

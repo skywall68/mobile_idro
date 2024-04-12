@@ -1,7 +1,7 @@
 .containerOperatore {
     display: grid;
-    background-color:#dbdad5;
-    margin:5px 100px ;
+    background-color: rgb(171, 170, 168);
+    margin:5px ;
     justify-content: center;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Aggiungi ombra al lato destro e in basso */
 }
@@ -10,18 +10,26 @@ h2 {
 }
 
 .containerOperatoreCH {
-    display: flex;
+    display: grid;
+    margin:5px;
+    /* background-color: rgb(171, 170, 168); */
     justify-content: center;
-    background-color: rgb(136, 137, 135);
-    margin:20px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Aggiungi ombra al lato destro e in basso */
+    background-image: linear-gradient(to bottom, #f9d404, #04040465);
+    margin:10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    width: 100%;
 }
 
 .inputBoxOperatoreCH {
-    font-size: 25px;
-    font-weight: 400;
+    margin: 5px;
+    font-size: 20px;
     text-align: center;
-    margin: 20px;
+    font-weight: 200px;
+    width: 300px; /* Larghezza del select */
+    padding: 10px; /* Spazio interno delle opzioni */
+    border-radius: 5px; /* Bordo arrotondato delle opzioni */
+   border: 1px solid #f30909; /* Bordo delle opzioni */
+
 }
 .containerOperatorePanier {
     display: flex;
@@ -32,15 +40,25 @@ h2 {
 }
 
 .inputBoxOperatorePanier {
-    font-size: 25px;
-    font-weight: 400;
+    margin: 5px;
+    font-size: 20px;
     text-align: center;
-    margin: 20px;
+    font-weight: 200px;
+    width: 300px; /* Larghezza del select */
+    padding: 10px; /* Spazio interno delle opzioni */
+    border-radius: 5px; /* Bordo arrotondato delle opzioni */
+   border: 1px solid #f30909; /* Bordo delle opzioni */
+
 }
 .inputBoxOperatore {
-    font-size: 15px;
-    font-weight: 200;
-    margin: 17px;
-    border: 1px solid #f30909; /* Bordo delle opzioni */
+    margin: 5px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 200px;
+    width: 300px; /* Larghezza del select */
+    padding: 10px; /* Spazio interno delle opzioni */
+    border-radius: 5px; /* Bordo arrotondato delle opzioni */
+   border: 1px solid #f30909; /* Bordo delle opzioni */
+
     
 }

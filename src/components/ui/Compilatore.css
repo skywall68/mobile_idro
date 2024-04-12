@@ -1,9 +1,9 @@
 .bodyCompilatore {
-    
-    
-    background-color: rgb(243, 243, 237);
-    margin:10px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Aggiungi ombra al lato destro e in basso */
+  display: grid;
+ 
+  justify-content: center;
+  margin:5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Aggiungi ombra al lato destro e in basso */
     
 }
 
@@ -35,7 +35,7 @@ h3 {
 .tabella {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    
   }
   
   th, td {

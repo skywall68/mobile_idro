@@ -51,7 +51,7 @@ const ElencoPanierSceltaFile = () => {
   return (
     <div className={!isGreen ? 'containerPanierElenco' :'containerPanierElencoGreen'  }><h2>Carico elencoPanier</h2>
     <label htmlFor="fileInput"></label>
-    <input type='file' accept='.pan' onChange={handleFileChange} style={{fontSize:20}}/>
+    <input id="fileInput" type='file' accept='.pan' onChange={handleFileChange} style={{fontSize:20}}/>
     </div>
   )
 }

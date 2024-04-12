@@ -99,11 +99,11 @@ const [commenti, setCommenti]=useState('')
            <button onClick={handleToggleTabella}>
            {mostraTabella ? 'O' : 'V'}
            </button>
-           <h2 style={{marginTop:'-20px'}}>Controlli</h2>
+          
           </div>
           <div>
           {mostraTabella && ( 
-          <table className='tabellapj8 pj8'>
+          <table className='tabellapj8_1 pj8'>
           <thead>
           <tr>
             <th>CONTROLLI</th>

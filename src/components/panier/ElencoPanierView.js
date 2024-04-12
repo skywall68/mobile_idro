@@ -37,7 +37,7 @@ const ElencoPanierView = ({setAppElementoPanierScelto}) => {
     <div className='containerListaPanier'>
      <h2>Elenco: </h2> 
      
-     <select className='selectPanier' onChange={handleSelectChange}  >
+     <select className='elencoPanier' onChange={handleSelectChange}  >
       {elencoPanier.map((elenco, index)=>(
          <option key={index} value={elenco}>
           {elenco}

@@ -24,12 +24,14 @@ const handleInputChange =(e)=>{
          <div className={sceltaModuloApp === 'ch' ? 'containerDataCH' :
           sceltaModuloApp === 'panier' ? 'containerDataPanier'
           : 'containerData'}>
-             <h2>Data:{appInputValue}</h2>
+             
+             <label htmlFor="dataMia"><h2>Data:{appInputValue}</h2></label>
              <input
              className={sceltaModuloApp === 'ch' ? 'inputBoxCH' :
              sceltaModuloApp === 'panier' ? 'inputBoxPanier'
              : 'inputBox'}
              type='text'
+             id="dataMia"
              value={appInputValue}
              onChange={handleInputChange}
               />

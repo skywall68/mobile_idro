@@ -22,6 +22,7 @@ const ScegliPjPDF = ({setPjPdf,setSelectedFile}) => {
         <h2>Scegli il file Pj</h2>
         <label htmlFor="fileInput"></label>
         <input
+        id="fileInput"
         type="file"
         accept=".pdf"
         ref={fileInputRef}
