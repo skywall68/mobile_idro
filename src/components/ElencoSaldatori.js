@@ -50,7 +50,7 @@ const ElencoSaldatori = ({setSelectMacchineOrsaldatori}) => {
     <div className={!isGreen ? 'containerSaldatori':'containerSaldatoriGreen'}>
       <h2>  Elenco saldatori</h2>
       <label htmlFor="fileInput"></label>
-      <input type='file' accept='.saldatori' onChange={handleFileChange} style={{fontSize:20}}/>
+      <input type='file' accept='.txt' onChange={handleFileChange} style={{fontSize:20}}/>
       </div>
   )
 }

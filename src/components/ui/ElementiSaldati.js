@@ -40,7 +40,7 @@ function ElementiSaldati({appElementi, setAppElementoScelto}) {
    
     setelementoScelto(e.target.value)
     setAppElementoScelto(e.target.value)//lo mando in App.js per spedirlo in fooder.js per la stampa
-    console.log('Elemento scelto:',e.target.value)
+   // console.log('Elemento scelto:',e.target.value)
 }
 
 

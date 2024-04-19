@@ -36,7 +36,7 @@ const CheckListPanier = ({setSelectPanier}) => {
    <div className={ !isGreen ? 'containerPanier':'containerPanierGreen'}>
    <h2>panierCompleto:</h2>
    <label htmlFor="fileInput"></label>
-    <input type="file" accept=".PANIER" onChange={handleFileRead} style={{fontSize:20}} />
+    <input type="file" accept=".txt" onChange={handleFileRead} style={{fontSize:20}} />
         
 </div>
  )

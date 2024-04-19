@@ -55,7 +55,7 @@ const CheckListDimensioniPj16View = ({setListaPagina2Pj16App,appPulisciCampo,set
       if (event.target.checked) {
         newControlli[id].conforme = event.target.name;
       } else {
-        newControlli[id].conforme = null;
+        newControlli[id].conforme = '';
       }
       setControlli(newControlli);
       setMioID(controlli[id].id) 
@@ -88,7 +88,7 @@ const CheckListDimensioniPj16View = ({setListaPagina2Pj16App,appPulisciCampo,set
        azione.id === id ? {...azione,[field]:value}: azione
     )
   )
-  console.log(`(CheckDimensioni.js f:handleInputChangeAzione)ID: ${id}, Campo: ${field}, Valore: ${value}`);
+  //console.log(`(CheckDimensioni.js f:handleInputChangeAzione)ID: ${id}, Campo: ${field}, Valore: ${value}`);
   
   }
  //aggiornamento prima di mandare il valori ad App.js
@@ -98,7 +98,7 @@ const CheckListDimensioniPj16View = ({setListaPagina2Pj16App,appPulisciCampo,set
 //***********************ModalMio***************************
 //funzione che chiude Modal richiamata dal componente ModalMio
  const closeModalMio =()=>{
-  console.log('controlli.',controlli)
+ //console.log('controlli.',controlli)
   setShowModalMio(false)
 }
 //*********************************fine******************************** */ 
@@ -148,7 +148,7 @@ const CheckListDimensioniPj16View = ({setListaPagina2Pj16App,appPulisciCampo,set
                                type="checkbox"
                                name="Conforme"
                                value="true"
-                               checked={controllo.conforme === true}
+                               checked={controllo.conforme}
                                onChange={(event)=> handleCheckboxChange(event,index )}
                                style={{
                                 // display:"flex", 

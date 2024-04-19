@@ -39,13 +39,13 @@ const ParametriStampa = ({setSelectedParametriStampa,selectedFile}) => {
             { selectedFile ==='PJ 8 - rev 6 - IT.pdf' ?
           //  <input id="fileInput" type="file" accept=".pst8" onChange={handleFileRead} style={{ display: 'none' }} /> :
           //  <input id="fileInput" type="file" accept=".pst16" onChange={handleFileRead} style={{ display: 'none' }} />
-           <input id="fileInput" type="file" accept=".pst8" onChange={handleFileRead} style={{fontSize:20}} /> :
+           <input id="fileInput" type="file" accept=".txt" onChange={handleFileRead} style={{fontSize:20}} /> :
             selectedFile ==='PJ 16 - rev 2 - IT.pdf' ?
-           <input id="fileInput" type="file" accept=".pst16" onChange={handleFileRead} style={{fontSize:20}}  /> :
+           <input id="fileInput" type="file" accept=".txt" onChange={handleFileRead} style={{fontSize:20}}  /> :
            selectedFile ==='PJ 8 - rev 6 - CH.pdf' ?
-           <input id="fileInput" type="file" accept=".chst" onChange={handleFileRead} style={{fontSize:20}}  /> :
+           <input id="fileInput" type="file" accept=".txt" onChange={handleFileRead} style={{fontSize:20}}  /> :
            selectedFile ==='PJ 16 - rev 2 - PANIER.pdf' ?
-           <input id="fileInput" type="file" accept=".pnst" onChange={handleFileRead} style={{fontSize:20}}  /> :
+           <input id="fileInput" type="file" accept=".txt" onChange={handleFileRead} style={{fontSize:20}}  /> :
            
            <input id="fileInput" type="file" onChange={handleFileRead} style={{fontSize:20}}  />
 

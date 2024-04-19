@@ -6,7 +6,7 @@ let data=""
 if (filteredData.length > 0) { // Assicurati che ci siano dati filtrati
     const firstFilteredItem = filteredData[0]; // Prendi il primo elemento dall'array filtrato
     data = firstFilteredItem.data;
-    console.log('Recupero la data e poi la carico sulla variabile:', data);
+    //console.log('Recupero la data e poi la carico sulla variabile:', data);
     return data; // Ritorna la data
   } else {
     data=""

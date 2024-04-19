@@ -36,9 +36,9 @@ const SeePdf = ({
   const handleFileChange = (e) => {
     const file = e.target.files[0];
     if (file) {
-       console.log('questo è il file scelto:', file)
+       //console.log('questo è il file scelto:', file)
       //console.log('recupera lista da app.js.',recuperaMiaLista) //ho la lista che arriva da App.js
-      console.log('nome lista scelta:',lista)
+      //console.log('nome lista scelta:',lista)
       setPdfPath(URL.createObjectURL(file));
       setLinesArray([]); // Resetta l'array quando il file cambia
       //leggiFile()

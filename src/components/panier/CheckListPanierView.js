@@ -33,11 +33,11 @@ const CheckListPanierView = ({setListaPagina1Pj16App,elencoAzioniApp,appPulisciC
 const handleOptionChange =(id, conformeValue)=>{
   const updatedItems = controlli.map(item =>{
     if (item.id === id) {
-      console.log('sono dentro handleOptionChange, item.id: ',item.id,'valore:',conformeValue)
+     // console.log('sono dentro handleOptionChange, item.id: ',item.id,'valore:',conformeValue)
       setMioID(item.id) //recupero il id della riga per mandarla nel modalMio per commenti/azioni
        //APRE IL MODAL se è 'non conforme'
        if(conformeValue === false){
-        console.log('dentro controlli!!!')
+       // console.log('dentro controlli!!!')
       //devo portare id nella modale
        setShowModalMio(true)
         }
@@ -45,14 +45,14 @@ const handleOptionChange =(id, conformeValue)=>{
 
     }
    
-    console.log('sono fuori')
+   // console.log('sono fuori')
     return item;
   });
   setControlli(updatedItems)
   setListaPagina1Pj16App(updatedItems) //recupero i valori per portarli in App.js per poi stamparli
   }
   //console.log('valore di MioID:',mioID)
-  console.log('valore Recupero i valori nella option box:',controlli)
+  //console.log('valore Recupero i valori nella option box:',controlli)
   //************************************************************************ */
    //******************Recupero i commenti ************************************* */
    const handleInputChangeCommenti = (id,field,value) =>{
@@ -66,7 +66,7 @@ const handleOptionChange =(id, conformeValue)=>{
    // console.log('valore Recupero i valori COMMENTO in update:',updatedControlli)
   return updatedControlli;
   });
-   console.log(`ID: ${id}, Campo: ${field}, Valore: ${value}`);
+  // console.log(`ID: ${id}, Campo: ${field}, Valore: ${value}`);
    setListaPagina1Pj16App(controlli) //recupero i valori per portarli in App.js per poi stamparli 
    setCommenti('')
  }
@@ -90,7 +90,7 @@ const handleOptionChange =(id, conformeValue)=>{
 //***********************Lavoro con ModalMio***************************
 //funzione che chiude Modal richiamata dal componente ModalMio
 const closeModalMio =()=>{
-  console.log('controlli.',controlli)
+  //console.log('controlli.',controlli)
   setShowModalMio(false)
 }
 //*********************************fine******************************** */ 

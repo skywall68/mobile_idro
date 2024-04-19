@@ -35,7 +35,7 @@ const ElementiLavorati = ({appElementi,setAppElementoScelto}) => {
     const handleSelectChange=(e)=>{
       setElementoScelto(e.target.value) //recupero il valore selezionato
       setAppElementoScelto(e.target.value)
-      console.log('elemento scelto:',e.target.value)
+      //console.log('elemento scelto:',e.target.value)
 
     }
     return (

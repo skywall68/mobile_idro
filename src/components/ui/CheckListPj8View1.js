@@ -32,18 +32,18 @@ const [commenti, setCommenti]=useState('')
     const handleOptionChange =(id, conformeValue)=>{
       const updatedItems = controlli.map(item =>{
         if (item.id === id) {
-          console.log('sono dentro handleOptionChange, id: ',id,'valore:',conformeValue)
+          //console.log('sono dentro handleOptionChange, id: ',id,'valore:',conformeValue)
           setMioID(item.id) //recupero il id della riga per mandarla nel modalMio per commenti/azioni
           //APRE IL MODAL se è 'non conforme'
           if(conformeValue === false){
-           console.log('dentro controlli!!!')
+           //console.log('dentro controlli!!!')
          //devo portare id nella modale
           setShowModalMio(true)
            }
           return { ...item, conforme: conformeValue };
 
         }
-        console.log('sono fuori')
+       //console.log('sono fuori')
         return item;
       });
       setControlli(updatedItems)
@@ -64,7 +64,7 @@ const [commenti, setCommenti]=useState('')
      // console.log('valore Recupero i valori COMMENTO in update:',updatedControlli)
     return updatedControlli;
     });
-      console.log(`ID: ${id}, Campo: ${field}, Valore: ${value}`);
+     // console.log(`ID: ${id}, Campo: ${field}, Valore: ${value}`);
       setListaPagina1Pj8App(controlli) //recupero i valori per portarli in App.js per poi stamparli
       setCommenti('')
     }
@@ -87,7 +87,7 @@ const [commenti, setCommenti]=useState('')
     //***********************Lavoro con ModalMio***************************
    //funzione che chiude Modal richiamata dal componente ModalMio
    const closeModalMio =()=>{
-  console.log('controlli.',controlli)
+  //console.log('controlli.',controlli)
   setShowModalMio(false)
 }
 //*********************************fine******************************** */ 

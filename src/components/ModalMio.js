@@ -4,7 +4,7 @@ import './ModalMio.css'
 
 const ModalMio = ({showModalMio, closeModalMio,commenti,setCommenti, mioID, setControlli,controlli,handleInputChangeCommenti,handleInputChangeAzione, elencoAzioniApp }) => {
   const [commentiModal, setCommentiModal]=useState('')
- console.log('DENTRO MODAL commento:',commenti, 'id:',mioID)
+ //console.log('DENTRO MODAL commento:',commenti, 'id:',mioID)
 
  const handleInputChange = ()=>{
   handleInputChangeCommenti(mioID, 'commenti', commentiModal)

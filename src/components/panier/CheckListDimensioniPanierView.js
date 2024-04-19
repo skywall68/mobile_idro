@@ -30,7 +30,7 @@ const [commenti, setCommenti]=useState('')
         // //ricarico la tabella senza le spunte
       useEffect(()=>{
         if(appPulisciCampo){
-         console.log('puliscicampo true:')
+         //console.log('puliscicampo true:')
           let fileArrayOggetti =[]
           if (filePj16PanierJson1) {
             fileArrayOggetti = JSON.parse(filePj16PanierJson1);
@@ -39,7 +39,7 @@ const [commenti, setCommenti]=useState('')
            setControlli(fileArrayObjFiltrato)
            setInizioControlli(fileArrayObjFiltrato)
            //console.log('chekdimensioni prima volta 3:',controlli)
-           console.log('chekdimensioni prima volta 4:',inizioControlli)
+           //console.log('chekdimensioni prima volta 4:',inizioControlli)
            setAppPulisciCampo(false)
           }
       },[appPulisciCampo])
@@ -58,7 +58,7 @@ const handleCheckboxChange = (event,id)=>{
   if (event.target.checked) {
     newControlli[id].conforme = event.target.name;
   } else {
-    newControlli[id].conforme = null;
+    newControlli[id].conforme = '';
   }
   setControlli(newControlli);
   
@@ -86,8 +86,8 @@ const handleInputChangeCommenti = (id,field,value) =>{
 return updatedControlli;
 });
     
-console.log(`(CheckPanierDimensioni.js f:handleInputChangeCommenti)ID: ${id}, Campo: ${field}, Valore: ${value}`);
-console.log('dentro panier:', controlli)
+//console.log(`(CheckPanierDimensioni.js f:handleInputChangeCommenti)ID: ${id}, Campo: ${field}, Valore: ${value}`);
+//console.log('dentro panier:', controlli)
 setCommenti('')
 //closeModalMio()
 
@@ -99,7 +99,7 @@ const handleInputChangeAzione = (id,field,value) =>{
      azione.id === id ? {...azione,[field]:value}: azione
   )
 )
-console.log(`(CheckCHDimensioni.js f:handleInputChangeAzione)ID: ${id}, Campo: ${field}, Valore: ${value}`);
+//console.log(`(CheckCHDimensioni.js f:handleInputChangeAzione)ID: ${id}, Campo: ${field}, Valore: ${value}`);
 
 }
 
@@ -112,7 +112,7 @@ useEffect(()=>{
 //***********************ModalMio***************************
 //funzione che chiude Modal richiamata dal componente ModalMio
 const closeModalMio =()=>{
-  console.log('controlli.',controlli)
+  //console.log('controlli.',controlli)
   setShowModalMio(false)
 }
 //*********************************fine******************************** */ 
@@ -161,7 +161,7 @@ const closeModalMio =()=>{
                              type="checkbox"
                              name="Conforme"
                              value="true"
-                             checked={controllo.conforme === true}
+                             checked={controllo.conforme}
                              onChange={(event)=> handleCheckboxChange(event,index )}
                             
                              style={{

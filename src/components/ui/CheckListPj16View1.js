@@ -64,7 +64,7 @@ const CheckListPj16View1 = ({setListaPagina1Pj16App,elencoAzioniApp}) => {
  // console.log('valore Recupero i valori COMMENTO in update:',updatedControlli)
 return updatedControlli;
 });
-   console.log(`ID: ${id}, Campo: ${field}, Valore: ${value}`);
+   //console.log(`ID: ${id}, Campo: ${field}, Valore: ${value}`);
    //setListaPagina1Pj16App(controlli) //recupero i valori per portarli in App.js per poi stamparli ??????????????????????????????????
  }
  //*************************************************************************** */
@@ -81,12 +81,12 @@ return updatedControlli;
 
  useEffect(()=>{
   setListaPagina1Pj16App(controlli)
-  console.log('valore di AZIONE PJ16:',controlli)
+  //console.log('valore di AZIONE PJ16:',controlli)
 },[controlli])
 //***********************Lavoro con ModalMio***************************
 //funzione che chiude Modal richiamata dal componente ModalMio
 const closeModalMio =()=>{
-  console.log('controlli.',controlli)
+  //console.log('controlli.',controlli)
   setShowModalMio(false)
 }
 //*********************************fine******************************** */ 

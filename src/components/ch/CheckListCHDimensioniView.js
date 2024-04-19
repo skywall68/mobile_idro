@@ -55,10 +55,10 @@ const CheckListCHDimensioniView = ({setListaPagina2Pj8App, elencoAzioniApp, appP
   if (event.target.checked) {
     newControlli[id].conforme = event.target.name;
   } else {
-    newControlli[id].conforme = null;
+    newControlli[id].conforme = '';
   }
   setControlli(newControlli);
-  console.log('valore di checkbox:', id, controlli[id].conforme, 'id:', controlli[id].id) 
+  //console.log('valore di checkbox:', id, controlli[id].conforme, 'id:', controlli[id].id) 
   setMioID(controlli[id].id) 
   //setListaPagina2Pj8App(controlli)
   //APRE IL MODAL se è 'non conforme'
@@ -81,8 +81,8 @@ const handleInputChangeCommenti = (id,field,value) =>{
 return updatedControlli;
 });
     
-console.log(`(CheckCHDimensioni.js f:handleInputChangeCommenti)ID: ${id}, Campo: ${field}, Valore: ${value}`);
-console.log('dentro CH:', controlli)
+//console.log(`(CheckCHDimensioni.js f:handleInputChangeCommenti)ID: ${id}, Campo: ${field}, Valore: ${value}`);
+//console.log('dentro CH:', controlli)
 setCommenti('')
 
 
@@ -94,7 +94,7 @@ const handleInputChangeAzione = (id,field,value) =>{
      azione.id === id ? {...azione,[field]:value}: azione
   )
 )
-console.log(`(CheckCHDimensioni.js f:handleInputChangeAzione)ID: ${id}, Campo: ${field}, Valore: ${value}`);
+//console.log(`(CheckCHDimensioni.js f:handleInputChangeAzione)ID: ${id}, Campo: ${field}, Valore: ${value}`);
 setListaPagina2Pj8App(controlli)
 }
 
@@ -106,10 +106,10 @@ useEffect(()=>{
 //***********************ModalMio***************************
 //funzione che chiude Modal richiamata dal componente ModalMio
 const closeModalMio =()=>{
-  console.log('controlli.',controlli)
+  //console.log('controlli.',controlli)
   setShowModalMio(false)
 }
-console.log('elenco checkListCHDimensioni:',controlli)
+//console.log('elenco checkListCHDimensioni:',controlli)
 //*********************************fine******************************** */
 
 
@@ -157,7 +157,7 @@ console.log('elenco checkListCHDimensioni:',controlli)
                              type="checkbox"
                              name="Conforme"
                              value="true"
-                             checked={controllo.conforme === true}
+                             checked={controllo.conforme}
                              onChange={(event)=> handleCheckboxChange(event,index )}
                             
                              style={{

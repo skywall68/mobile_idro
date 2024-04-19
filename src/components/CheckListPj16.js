@@ -33,7 +33,7 @@ const CheckListPj16 = ({setSelectedPj8OrPj16}) => {
     <div className={ !isGreen ?'containerPj16': 'containerPj16Green'}>
         <h2>Parametri Pj16</h2>
         <label htmlFor="fileInput"></label>
-        <input type="file" accept=".pj16" onChange={handleFileRead}style={{fontSize:20}} />
+        <input type="file" accept=".txt" onChange={handleFileRead}style={{fontSize:20}} />
     </div>
   )
 }

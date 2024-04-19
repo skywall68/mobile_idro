@@ -106,7 +106,7 @@ const [operatoreYX, setOperatoreYX]= useState([]) //valori x e y di operatore
     const azioneC_pag2 = paramStampa.find(ele => ele.nome==="azioni_pag2")
     const azionC_pag2 = azioneC_pag2 ? azioneC_pag2.x : "valore x di azione curativa non trovato"
     setAzioneCurativaXpag2(azionC_pag2)
-    console.log('azione curativa:',azioneCurativaXpag2)
+   //console.log('azione curativa:',azioneCurativaXpag2)
 
     const controllato = paramStampa.find(ele => ele.nome==="controllato 1 di")
     if(controllato){
@@ -216,7 +216,7 @@ const [operatoreYX, setOperatoreYX]= useState([]) //valori x e y di operatore
   }
   
   const parametri_stampa = parametriStampa
-  const nElementi = `n°1 di ${appControllatoNdi}`
+  const nElementi = appControllatoNdi
   const spuntaFabbrica='x'
   const spuntaSuPiano = 'x'
   const cantiere = `${appCantiere}   /`
@@ -267,7 +267,7 @@ const [operatoreYX, setOperatoreYX]= useState([]) //valori x e y di operatore
       const nuovoNomeCantiere = parteIniziale.slice(0,24)+ '.'
       paginaUnoAlto.splice(indexNomeCantiere,1) //rimuovi cantiere
       paginaUnoAlto.splice(indexNomeCantiere,0,nuovoNomeCantiere) //aggiungi cantiere modificato
-      console.log('troncato:',nuovoNomeCantiere)
+     // console.log('troncato:',nuovoNomeCantiere)
 
      }
    }//fine controllo lunghezza cantiere
@@ -297,7 +297,7 @@ const [operatoreYX, setOperatoreYX]= useState([]) //valori x e y di operatore
          coordinate = parametri_stampa[index]
          testoDaStampare=testo
          valoreY=coordinate.y 
-         console.log('testo da stampare:','testo:',testo,'coordinate:', coordinate.x,valoreY)
+         //console.log('testo da stampare:','testo:',testo,'coordinate:', coordinate.x,valoreY)
          page1.drawText(testoDaStampare, {
            x: coordinate.x,
            y: height  - coordinate.y, 
@@ -312,7 +312,7 @@ const [operatoreYX, setOperatoreYX]= useState([]) //valori x e y di operatore
        let mioIdPagina1 = idPagina1  //corrisponde id:11 del file paramentri stampa
        let coordinate_pagina = []
        //let xNonconforme = nonConformeX
-       console.log('lista pagina1:',listaPagina1)
+       //console.log('lista pagina1:',listaPagina1)
 
        listaPagina1.forEach((controllo )=>{
        coordinate_pagina = parametri_stampa[mioIdPagina1]
@@ -327,7 +327,7 @@ const [operatoreYX, setOperatoreYX]= useState([]) //valori x e y di operatore
           }
           
           )
-          console.log('stampo il testo:',testo_spuntato)
+          //console.log('stampo il testo:',testo_spuntato)
          } else if (controllo.conforme === false) {
           page1.drawText(testo_spuntato, {
             x:coordinate_pagina.x + nonConformeXpag1,
@@ -345,7 +345,7 @@ const [operatoreYX, setOperatoreYX]= useState([]) //valori x e y di operatore
                 size:fontSizeX,
                 color: rgb(0, 0, 0),  
               })
-              console.log('sei dentro if di commenti,valore di azione è:',controllo.azioneCurativa)
+              //console.log('sei dentro if di commenti,valore di azione è:',controllo.azioneCurativa)
               page1.drawText(controllo.azioneCurativa,{
                 x:azioneCurativaXpag1,
                 y: height -coordinate_pagina.y,
@@ -372,7 +372,7 @@ const [operatoreYX, setOperatoreYX]= useState([]) //valori x e y di operatore
       let mioIdPagina2 = idPagina2 //corrisponde id:18(pj8) del file paramentri stampa
       listaPagina2.forEach((controllo)=>{
       coordinate_pagina = parametri_stampa[mioIdPagina2]
-      console.log('lista pagina2:',listaPagina2)
+      //console.log('lista pagina2:',listaPagina2)
       if(controllo.conforme === 'Conforme' ){
         page2.drawText(testo_spuntato, {
          x:coordinate_pagina.x,
@@ -414,6 +414,8 @@ const [operatoreYX, setOperatoreYX]= useState([]) //valori x e y di operatore
      mioIdPagina2++
     })
     //data del controllo:
+    let dataInvertita =dataControllo.replace(/(\d{2})\/(\d{2})\/(\d{2})/, "$3_$2_$1");
+    
     page2.drawText(dataControllo, {
       
       x:dataControlloYX[1],
@@ -433,7 +435,7 @@ const [operatoreYX, setOperatoreYX]= useState([]) //valori x e y di operatore
      })
      const modifiedPdfBytes = await pdfDoc.save(); //consente di salvare le modifiche apportate al documento PDF e ottenere i byte rappresentanti il PDF modificato
      const blob = new Blob([modifiedPdfBytes], { type: 'application/pdf' });// crea un oggetto Blob  rappresenta un blocco di dati, in questo caso, l'array di byte che costituisce il documento PDF modificato
-     saveAs(blob, `${dataControllo}-${lista}.pdf`); /* utilizza FileSaver.js per avviare il processo di salvataggio del file nel browser. Il browser visualizzerà quindi una finestra di dialogo per il salvataggio, consentendo 
+     saveAs(blob, `${dataInvertita}-${lista}.pdf`); /* utilizza FileSaver.js per avviare il processo di salvataggio del file nel browser. Il browser visualizzerà quindi una finestra di dialogo per il salvataggio, consentendo 
      all'utente di scaricare il file PDF modificato con il nome specificato ('output.pdf').*/ 
       //recupero la lista da visualizzare come ultima fatta:
       setAppRecuperaLista(appLista)
@@ -485,8 +487,8 @@ const [operatoreYX, setOperatoreYX]= useState([]) //valori x e y di operatore
   }
 
 const nodeRef = useRef(null);
-console.log('dentro footer elenco listaPagina2Pj8App ',listaPagina2Pj8App)
-console.log('dentro footer, la pagina listaPagina2Pj16App:',listaPagina2Pj16App)
+//console.log('dentro footer elenco listaPagina2Pj8App ',listaPagina2Pj8App)
+//console.log('dentro footer, la pagina listaPagina2Pj16App:',listaPagina2Pj16App)
   return (
     <React.Fragment>
       <Modal 

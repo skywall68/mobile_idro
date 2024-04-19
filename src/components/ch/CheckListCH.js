@@ -36,7 +36,7 @@ const CheckListCH = ({setSelectCH}) => {
     <div className={ !isGreen ? 'containerCH':'containerCHGreen'}>
     <h2>ch_Completo</h2>
     <label htmlFor="fileInput"></label>
-     <input type="file" accept=".CH" onChange={handleFileRead} style={{fontSize:20}} />
+     <input type="file" accept=".txt" onChange={handleFileRead} style={{fontSize:20}} />
          
  </div>
   )

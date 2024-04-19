@@ -47,7 +47,7 @@ const ElencoTipologia = ({setSelectTipologia}) => {
       <div className={!isGreen ?'containerTipologia':'containerTipologiaGreen'}>
         <h2>  Elenco tipologia elementi</h2>
         <label htmlFor="fileInput"></label>
-        <input type='file' accept='.tpl' onChange={handleFileChange} style={{fontSize:20}}/>
+        <input type='file' accept='.txt' onChange={handleFileChange} style={{fontSize:20}}/>
         </div>
     )
   }

@@ -51,7 +51,7 @@ const ElencoCHSceltaFile = () => {
   return (
     <div className={!isGreen ? 'containerCHElenco' :'containerCHElencoGreen'  }><h2>Carico elenco CH</h2>
     <label htmlFor="fileInput"></label>
-    <input type='file' accept='.chelenco' onChange={handleFileChange} style={{fontSize:20}}/>
+    <input type='file' accept='.txt' onChange={handleFileChange} style={{fontSize:20}}/>
     </div>
   )
 }

@@ -111,7 +111,7 @@ function App() {
       if(elencoStringa){
         const elencoArray = JSON.parse(elencoStringa)
         setElencoAzioniApp(elencoArray)
-        console.log('Elenco AZIONI:',elencoAzioniApp)
+        console.log('Elenco AZIONI:',elencoArray)
       }
       
     } catch (error) {
@@ -356,13 +356,13 @@ function App() {
     //setFilePj16JsonApp={setFilePj16JsonApp}
     />
   }
-  console.log('App 228 Visualizza modulo CH:',visualizzaModuloCHApp)
+  //console.log('App 228 Visualizza modulo CH:',visualizzaModuloCHApp)
 
   
  
   //console.log('pdf8 su App.js:',pj8App)
   //console.log('tipologia dentro App:',tipologiaSceltaApp, 'modulo:',sceltaModuloApp)
-  console.log('In checkdimensione8:',listaPagina2Pj8App)
+  //console.log('In checkdimensione8:',listaPagina2Pj8App)
 
   return (
     <div>
@@ -427,7 +427,7 @@ function App() {
             {checkListPanierDimensioniView}
             {footer}
           </div>
-           :<p>&copy;2024 WM ver: 0.0.1</p>
+           :<p>&copy;2024 WM ver: 0.0.2</p>
             }
             
        

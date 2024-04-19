@@ -65,7 +65,7 @@ const Planning = () => {
  
          
        setExcelData(filteredRows);
-       console.log('Filtered Rows:', filteredRows);
+      // console.log('Filtered Rows:', filteredRows);
        localStorage.setItem('dataLista',JSON.stringify(filteredRows)) //memorizza l'array di oggetti data e liste[]
       
      };

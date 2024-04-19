@@ -21,7 +21,7 @@ const ElencoMacchine = ({setSelectMacchineOrsaldatori}) => {
         setElencoTxt(lines)
         setSelectMacchineOrsaldatori(true) //mi permette di visualizzare il dato OK su Impostazioni.js
         setIsGreen(true) //mi rende il componente verde
-        console.log('dentro ElencoMacchine.js.',lines)
+       //console.log('dentro ElencoMacchine.js.',lines)
 
         
       } catch (error) {
@@ -48,7 +48,7 @@ const ElencoMacchine = ({setSelectMacchineOrsaldatori}) => {
   return (
     <div className={!isGreen ?'containerElencoMacchine':'containerElencoMacchineGreen'}><h2>Carico elenco Macchine</h2>
     <label htmlFor="fileInput"></label>
-    <input id="fileInput" type='file' accept='.macchine' onChange={handleFileChange} style={{fontSize:20}}/>
+    <input id="fileInput" type='file' accept='.txt' onChange={handleFileChange} style={{fontSize:20}}/>
     </div>
   )
 }
