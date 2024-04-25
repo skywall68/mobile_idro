@@ -42,7 +42,7 @@ const ElencoAzioni = ({setSelectMacchineOrsaldatori}) => {
   }
 
   return (
-    <div className={!isGreen ?'containerElencoAzioni':'containerElencoAzioniGreen'}><h2>Carico elenco Azioni</h2>
+    <div className={!isGreen ?'containerElencoAzioni':'containerElencoAzioniGreen'}><h2>Azioni</h2>
     <label htmlFor="fileInput"></label>
     <input id="fileInput" type='file' accept='.txt' onChange={handleFileChange} style={{fontSize:20}}/>
     </div>

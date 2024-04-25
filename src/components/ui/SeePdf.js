@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
 
+
+
 import  './SeePdf.css'  /*importo file css*/ 
 import RecuperaData from './RecuperaData';
-
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
+//pdfjsLib.GlobalWorkerOptions.workerSrc = '//unpkg.com/pdfjs-dist@' + pdfjsLib.version + '/build/pdf.worker.min.js';
+
 // mi permette di vedere le liste e di recuperare le informazioni
 const SeePdf = ({
   leggiFile,

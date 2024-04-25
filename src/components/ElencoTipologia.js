@@ -45,7 +45,7 @@ const ElencoTipologia = ({setSelectTipologia}) => {
    
     return (
       <div className={!isGreen ?'containerTipologia':'containerTipologiaGreen'}>
-        <h2>  Elenco tipologia elementi</h2>
+        <h2> Tipologia </h2>
         <label htmlFor="fileInput"></label>
         <input type='file' accept='.txt' onChange={handleFileChange} style={{fontSize:20}}/>
         </div>

@@ -1,7 +1,7 @@
 .containerCheckListPanierView {
     display: flex;
     justify-content: center;
-     background-color: rgb(252, 218, 184);
+     background-color: rgb(248, 233, 178);
      margin:10px;
      
      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Aggiungi ombra al lato destro e in basso */

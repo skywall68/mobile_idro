@@ -1,12 +1,15 @@
 import React, { useState,useRef, useEffect } from 'react'
 import { PDFDocument, rgb, StandardFonts } from 'pdf-lib';
 import { saveAs } from 'file-saver';
+import pdfFile8 from '../../PJ8.pdf'
+import pdfFile16 from '../../PJ16.pdf'
 
 
 import Tasto from '../Tasto'
 import Modal from './Modal'
 
 import './Footer.css'
+
 
 const Footer = ({
   setAppRecuperaLista, //porto in app la lista
@@ -56,9 +59,10 @@ const [ azioneCurativaXpag2, setAzioneCurativaXpag2]= useState() //valore azione
 const [controllato1DiYX, setControllato1DiYX] = useState([]) //valori x e y di Controllato 1 elemento di
 const [dataControlloYX, setDataControlloYX]= useState([])  //valori x e y di data controllo
 const [operatoreYX, setOperatoreYX]= useState([]) //valori x e y di operatore
+const [pdfModificato, setPdfModificato]=useState([]) //sequenza di bytes modificati
 
   
-
+console.log('data dentro footer:', appData)
 
 
 //recupero parametri stampa:
@@ -156,18 +160,7 @@ const [operatoreYX, setOperatoreYX]= useState([]) //valori x e y di operatore
     
     //console.log('sono dentro conferma e vediamo i dati:',listaPagina2Pj8App)
     setShowModalPrint(true)// mi apre una finestra modal quando premo tasto conferma
-    // console.log('font:',fontSizeX)
-    // console.log('non conforme:',nonConformeX)
-    // console.log('id pagina 1:',idPagina1)
-    // console.log('id pagina 2:',idPagina2)
-    // console.log('commenti valore x:',commentiX)
-     //console.log('azione curativa:',azioneCurativaXpag2)
-    // console.log('controllato 1 di:',controllato1DiYX[0],controllato1DiYX[1])
-    // console.log('data controllo:',dataControlloYX[0],dataControlloYX[1],dataControllo)
-    // console.log('operatore:',operatoreYX[0],operatoreYX[1],operatore)
-
-    // console.log('dentro modal!!!!',parametri_stampa,'pdf:',nomeAbbreviatoPDF)
-
+    
      
   }
  } 
@@ -182,10 +175,10 @@ const [operatoreYX, setOperatoreYX]= useState([]) //valori x e y di operatore
     lista = appLista
   } else if (elementoCHSceltoApp !==''){
     lista = elementoCHSceltoApp
-    dataControllo = appInputValue
+    dataControllo = appData
   } else if (elementoPanierSceltoApp !==''){
     lista = elementoPanierSceltoApp
-    dataControllo = appInputValue
+    dataControllo = appData
    
   }
     
@@ -229,28 +222,28 @@ const [operatoreYX, setOperatoreYX]= useState([]) //valori x e y di operatore
   let nomeAbbreviatoPDF=''
   //scelta del modulo
   if(pj8App){
-    pdfFile=pj8App
+    pdfFile=pdfFile8
     listaPagina1=listaPagina1Pj8App
     listaPagina2=listaPagina2Pj8App
     nomeAbbreviatoPDF='pj8'
     macchinaOsaldatori=saldatori
    }
   if(pj16App){
-    pdfFile=pj16App
+    pdfFile=pdfFile16
     listaPagina1=listaPagina1Pj16App
     listaPagina2=listaPagina2Pj16App
     nomeAbbreviatoPDF='pj16'
     macchinaOsaldatori=macchina
    }
    if(pjCH){
-    pdfFile=pjCH
+    pdfFile=pdfFile8
     listaPagina1=listaPagina1Pj8App
     listaPagina2=listaPagina2Pj8App
     nomeAbbreviatoPDF='ch'
     macchinaOsaldatori=macchina
    }
    if(pjPanier){
-    pdfFile=pjPanier
+    pdfFile=pdfFile16
     listaPagina1=listaPagina1Pj16App
     listaPagina2=listaPagina2Pj16App
     nomeAbbreviatoPDF=`${dataControllo}_pan`
@@ -282,7 +275,11 @@ const [operatoreYX, setOperatoreYX]= useState([]) //valori x e y di operatore
     let testoDaStampare=''
     
     try {
-        const existingPdfBytes = await pdfFile.arrayBuffer();
+        
+        //const existingPdfBytes = await pdfFile.arrayBuffer();
+        // Leggi il file come ArrayBuffer
+        const response = await fetch(pdfFile);
+        const existingPdfBytes = await response.arrayBuffer();
         const pdfDoc = await PDFDocument.load(existingPdfBytes);
         const page1 = pdfDoc.getPages()[0]; // dichiara una variabile page che contiene l'oggetto rappresentante la prima pagina del documento PDF.
         const { width, height } = page1.getSize(); //utilizza la destructuring assignment di JavaScript per estrarre i valori delle proprietà width e 
@@ -434,9 +431,12 @@ const [operatoreYX, setOperatoreYX]= useState([]) //valori x e y di operatore
 
      })
      const modifiedPdfBytes = await pdfDoc.save(); //consente di salvare le modifiche apportate al documento PDF e ottenere i byte rappresentanti il PDF modificato
+     //salvaPdf(modifiedPdfBytes)
+     //setPdfModificato(modifiedPdfBytes)
+    
      const blob = new Blob([modifiedPdfBytes], { type: 'application/pdf' });// crea un oggetto Blob  rappresenta un blocco di dati, in questo caso, l'array di byte che costituisce il documento PDF modificato
-     saveAs(blob, `${dataInvertita}-${lista}.pdf`); /* utilizza FileSaver.js per avviare il processo di salvataggio del file nel browser. Il browser visualizzerà quindi una finestra di dialogo per il salvataggio, consentendo 
-     all'utente di scaricare il file PDF modificato con il nome specificato ('output.pdf').*/ 
+     saveAs(blob, 'fileSalvato.pdf'); /* utilizza FileSaver.js per avviare il processo di salvataggio del file nel browser. Il browser visualizzerà quindi una finestra di dialogo per il salvataggio, consentendo 
+     //all'utente di scaricare il file PDF modificato con il nome specificato ('output.pdf').*/ 
       //recupero la lista da visualizzare come ultima fatta:
       setAppRecuperaLista(appLista)
     } catch (error) {
@@ -446,6 +446,104 @@ const [operatoreYX, setOperatoreYX]= useState([]) //valori x e y di operatore
 
   }
   //****************************FINE*********************************************************************** */
+  
+  //funzione di salvataggio
+  //  function salvaPdf(){
+  //   const pdfBytes =  pdfModificato
+  //   // Crea un Blob dal PDF modificato
+  // const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+  // // Crea un URL dal Blob
+  // const pdfUrl = URL.createObjectURL(blob);
+  // // Crea un elemento <a> temporaneo per simulare il download
+  // const downloadLink = document.createElement('a');
+  // downloadLink.href = pdfUrl;
+  // downloadLink.download = 'documento_modificato.pdf';
+  // // Aggiungi l'elemento al DOM e clicca su di esso per scaricare
+  // document.body.appendChild(downloadLink);
+  // downloadLink.click();
+  // Rimuovi l'elemento dopo il download
+ // document.body.removeChild(downloadLink);
+
+  //}
+
+  // function salvaPdf(){
+  //     const pdfBytes =  pdfModificato
+  //     // Crea un Blob dal PDF modificato
+  //     const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+  //     // Crea un URL dal Blob
+  //     const pdfUrl = URL.createObjectURL(blob);
+  //      // Crea un link di download
+  //     const downloadLink = document.createElement('a');
+  //     downloadLink.href = pdfUrl;
+  //     downloadLink.download = 'pdf_creato.pdf';
+
+  //    // Aggiungi l'elemento al DOM e clicca su di esso per scaricare
+  //     document.body.appendChild(downloadLink);
+  //     downloadLink.click();
+
+  // // Rimuovi l'elemento dopo il download
+  // document.body.removeChild(downloadLink);
+
+  // }
+  // async function salvaPdf(){
+  //   const existingPdfBytes = await pdfFile.arrayBuffer();
+  //   const pdfDoc = await PDFDocument.load(existingPdfBytes);
+  //   // Prepara il PDF per la stampa
+  // const pdfBytes = await pdfDoc.save();
+  //  // Crea un Blob dal PDF
+  //  const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+  //  // Crea un URL dal Blob
+  // const pdfUrl = URL.createObjectURL(blob);
+
+  // // Utilizza l'URL per aprire il PDF in una nuova finestra/tab del browser
+  // window.open(pdfUrl, '_blank');
+
+  // }
+  // async function salvaPdf(){
+  //   const doc = new jsPDF();
+  //   const base64Data = await new Promise((resolve) => {
+  //     const reader = new FileReader();
+  //     reader.readAsDataURL(new Blob([pdfModificato], { type: 'application/pdf' }));
+  //     reader.onload = () => resolve(reader.result);
+  //   });
+  
+  //   const imgData = base64Data.split(',')[1]; // Extract base64 data
+  //   doc.addImage(imgData, 'PNG', 0, 0); // Add the modified PDF content as an image
+  
+  //   const filename = 'pdfModificato.pdf';
+  //   doc.save(filename);
+
+  // }
+  //esempio:
+  const salvaPdf= async(pdfBuffer)=>{
+    console.log('dentro salva file il valore è:',pdfBuffer)
+    const pdfDoc = await PDFDocument.load(pdfBuffer);
+    const pages = pdfDoc.getPages();
+  
+    // Modifica il contenuto del PDF qui
+    // Ad esempio, aggiungi un testo sulla prima pagina
+    const page = pages[0];
+    const text = 'Hello World!';
+    const font = await pdfDoc.embedFont('Helvetica');
+    page.drawText(text, {
+      x: 100,
+      y: 100,
+      size: 24,
+      font,
+    });
+  
+    // Salva il PDF modificato
+    const pdfBytes = await pdfDoc.save();
+    const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+    const url = URL.createObjectURL(blob);
+  
+    // Scarica il PDF sul dispositivo
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'metaAi.pdf';
+    link.click();
+  }
+
   //***********************COMANDO DI STAMPA****************************************************************
   const handlePrintClick = ()=> {
     if((operatore !=='' && saldatori!=='Scegli' && tipologia !=='Scegli')||(operatore !=='' && macchina!=='Scegli' && tipologia !=='Scegli')){
@@ -510,6 +608,7 @@ const nodeRef = useRef(null);
               <button className='button-container-conferma'  onClick={handleCancel}>CANCELLA</button>
              
               <button className='button-container-conferma'  onClick={openModalPrintHandler}>CONFERMA</button>
+            
          
       </div>
     </React.Fragment>

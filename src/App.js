@@ -70,18 +70,32 @@ function App() {
     setAppInputValue('')
    }
 
-  // useEffect(()=>{
-  //   //recupera data da Planning
-  //   if(appLista !==''){
-  //     setAppData(RecuperaData(appLista))
-  //     console.log('sono in App.js e recupero lista:',appLista)
-  //     console.log('sono in App.js e recupero data',appData)
-  //     console.log("sono in App e recupero elementi:", appElementi)
-  //     console.log('elemento CH scelto:', elementoCHSceltoApp)
-  //   }
-  
-  // },[appLista])
-  //console.log('elemento CH scelto:', elementoCHSceltoApp)
+  //data odierna:
+  //recupero la data odierna:
+function getDataItaliana() {
+  // Oggetto data JavaScript per ottenere la data corrente
+  const dataCorrente = new Date();
+
+  // Ottenere giorno, mese e anno dalla data corrente
+  const giorno = String(dataCorrente.getDate()).padStart(2, '0');
+  const mese = String(dataCorrente.getMonth() + 1).padStart(2, '0'); // +1 perché i mesi in JavaScript partono da 0
+  const anno = String(dataCorrente.getFullYear()).slice(-2); // prendi solo gli ultimi due caratteri dell'anno
+
+  // Costruire la stringa della data in formato "dd/mm/yy"
+  const dataItaliana = `${giorno}/${mese}/${anno}`;
+
+  // Restituire la data italiana
+  return dataItaliana;
+}
+
+
+const dataOggi = getDataItaliana();
+console.log("La data italiana di oggi è:", dataOggi);
+
+useEffect(()=>{
+  setAppData(dataOggi)
+},[dataOggi])
+
 
   //recupero il numero dopo N. di elementi dalla stringa ricevuta da appControllatoNdi che arriva da ElementiSaldati.js
   useEffect(()=>{
@@ -175,7 +189,7 @@ function App() {
               appOpera={appOpera}
               appPlan={appPlan}
                 />
-    data=<Data appData={appData} setAppData={setAppData}  appInputValue={appInputValue} setAppInputValue={setAppInputValue}  />
+    // data=<Data appData={appData} setAppData={setAppData}  appInputValue={appInputValue} setAppInputValue={setAppInputValue}  />
     operatore = <Operatore setAppOperatore={setAppOperatore} />            
     //Scelta della scheda Saldatori o Macchine
                 if(sceltaModuloApp === '8pj'){
@@ -249,7 +263,7 @@ function App() {
     //***************************fine raccolta per la stampa pj8 e pj16******************************************** */
     //SE UN MODULO CH
   } else if(visualizzaModuloCHApp){
-    data=<Data setAppData={setAppData}  appInputValue={appInputValue} setAppInputValue={setAppInputValue} sceltaModuloApp={sceltaModuloApp}  />
+    // data=<Data setAppData={setAppData}  appInputValue={appInputValue} setAppInputValue={setAppInputValue} sceltaModuloApp={sceltaModuloApp}  />
     operatore = <Operatore setAppOperatore={setAppOperatore} sceltaModuloApp={sceltaModuloApp} /> 
     macchineView = <MacchineView setMacchinaSceltaApp={setMacchinaSceltaApp} sceltaModuloApp={sceltaModuloApp}  />
     checkListCHView=<CheckListCHView
@@ -295,7 +309,7 @@ function App() {
   }
   //se sono PANIER allora eseguo:
   else if(visualizzaModuloPanierApp){
-    data=<Data setAppData={setAppData}  appInputValue={appInputValue} setAppInputValue={setAppInputValue} sceltaModuloApp={sceltaModuloApp}  />
+    // data=<Data setAppData={setAppData}  appInputValue={appInputValue} setAppInputValue={setAppInputValue} sceltaModuloApp={sceltaModuloApp}  />
     operatore = <Operatore setAppOperatore={setAppOperatore} sceltaModuloApp={sceltaModuloApp} /> 
     macchineView = <MacchineView setMacchinaSceltaApp={setMacchinaSceltaApp} sceltaModuloApp={sceltaModuloApp}  />
     checkListPanierView = <CheckListPanierView
@@ -389,7 +403,7 @@ function App() {
                   
                  
                     <div className='contenitore'>
-                      {data}
+                      {/* {data} */}
                       {operatore}
                       {saldatoriView}
                       {macchineView}
@@ -408,7 +422,7 @@ function App() {
             : visualizzaModuloCHApp ?
             <div>
               <h1 style={{textAlign:'center'}}>Controllo CH</h1>
-              {data}
+              {/* {data} */}
               {operatore}
               {macchineView}
               {elencoCHView}
@@ -419,7 +433,7 @@ function App() {
             : visualizzaModuloPanierApp ?
             <div>
             <h1 className='panier'>Controllo Panier</h1>
-            {data}
+            {/* {data} */}
             {operatore}
             {macchineView}
             {elencoPanierView}
@@ -427,7 +441,7 @@ function App() {
             {checkListPanierDimensioniView}
             {footer}
           </div>
-           :<p>&copy;2024 WM ver: 0.0.2</p>
+           :<p>&copy;2024 WM ver: 0.0.4 mobile3</p>
             }
             
        
