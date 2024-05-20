@@ -1,8 +1,11 @@
 .containerOperatore {
-    display: grid;
+    height: 100%;
+    display: flex;
+    flex-direction: column; /* Per allineare i contenuti verticalmente */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra orizzontalmente */
     background-color: rgb(171, 170, 168);
-    margin:5px ;
-    justify-content: center;
+    margin:10px 100px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Aggiungi ombra al lato destro e in basso */
 }
 h2 {
@@ -24,7 +27,7 @@ h2 {
     margin: 5px;
     font-size: 20px;
     text-align: center;
-    font-weight: 200px;
+    font-weight: 400;
     width: 300px; /* Larghezza del select */
     padding: 10px; /* Spazio interno delle opzioni */
     border-radius: 5px; /* Bordo arrotondato delle opzioni */
@@ -47,7 +50,7 @@ h2 {
     margin: 5px;
     font-size: 20px;
     text-align: center;
-    font-weight: 200px;
+    font-weight: 400;
     width: 300px; /* Larghezza del select */
     padding: 10px; /* Spazio interno delle opzioni */
     border-radius: 5px; /* Bordo arrotondato delle opzioni */
@@ -58,8 +61,8 @@ h2 {
     margin: 5px;
     font-size: 20px;
     text-align: center;
-    font-weight: 200px;
-    width: 300px; /* Larghezza del select */
+    font-weight: 400;
+    width: 375px; /* Larghezza del select */
     padding: 10px; /* Spazio interno delle opzioni */
     border-radius: 5px; /* Bordo arrotondato delle opzioni */
    border: 1px solid #f30909; /* Bordo delle opzioni */

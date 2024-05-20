@@ -20,7 +20,7 @@ const ElencoAzioni = ({setSelectMacchineOrsaldatori}) => {
         setElencoTxt(lines)
         setSelectMacchineOrsaldatori(true) //mi permette di visualizzare il dato OK su Impostazioni.js
         setIsGreen(true) //mi rende il componente verde
-        console.log('dentro ElencoAzioni.js.',lines)
+        //console.log('dentro ElencoAzioni.js.',lines)
     } catch (error) {
         console.log('da ElencoAzioni.js errore caricamento file', error)
       }

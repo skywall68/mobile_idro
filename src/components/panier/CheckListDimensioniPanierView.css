@@ -1,27 +1,24 @@
-.containerCheckListPanierDimensioni {
-    background-color: rgb(219, 222, 135);
-    margin:20px;
-}
+
 .bottone_check_list {
  
     margin-top: 20px;
-    background-color: #dcbe0f;
+    
     height: 40px;
 }
 
 .tabella {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    margin-top: 30px;
   }
   
   th, td {
     border: 1px solid #0c0b0b;
-    padding: 8px;
-    text-align: left;
+    padding: 10px;
+    text-align: center;
     font-size: 14px;
   }
   
   th {
-    background-color: #f2f7a4;
+    background-color: #f7e0a4;
   }

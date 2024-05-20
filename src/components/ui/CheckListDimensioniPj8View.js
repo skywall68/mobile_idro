@@ -8,7 +8,7 @@ import './CheckListDimensioniPj8View.css'
 const CheckListDimensioniPj8View = ({setListaPagina2Pj8App, appPulisciCampo, setAppPulisciCampo,elencoAzioniApp}) => {
     //recupero la seconda  parte del modulo pj8 da local storage
     const [controlli, setControlli] = useState([])
-    const [inizioControlli, setInizioControlli]=useState([])
+    const [, setInizioControlli]=useState([])
     const [showModalMio, setShowModalMio]=useState(false)
     const [mioID, setMioID]=useState(0)
     const [commenti, setCommenti]=useState('')
@@ -211,22 +211,7 @@ const CheckListDimensioniPj8View = ({setListaPagina2Pj8App, appPulisciCampo, set
                                         )}
                                </label>         
                             </td>
-                            {/* <td>
-                               <input
-                                    type='text'
-                                    value={controllo.commenti}
-                                    onChange={(e)=>handleInputChangeCommenti(controllo.id, 'commenti', e.target.value)}
-                                    placeholder='commenti'
-                                     />
-                            </td>
-                            <td>
-                               <input
-                                      type='text'
-                                      value={controllo.azioneCurativa}
-                                      onChange={(e)=>handleInputChangeAzione(controllo.id, 'azioneCurativa', e.target.value)}
-                                      placeholder='azione curativa'
-                                 />
-                            </td> */}
+                           
                       </tr>
                     ))
                 }

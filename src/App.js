@@ -90,7 +90,7 @@ function getDataItaliana() {
 
 
 const dataOggi = getDataItaliana();
-console.log("La data italiana di oggi è:", dataOggi);
+//console.log("La data italiana di oggi è:", dataOggi);
 
 useEffect(()=>{
   setAppData(dataOggi)
@@ -125,7 +125,7 @@ useEffect(()=>{
       if(elencoStringa){
         const elencoArray = JSON.parse(elencoStringa)
         setElencoAzioniApp(elencoArray)
-        console.log('Elenco AZIONI:',elencoArray)
+        //console.log('Elenco AZIONI:',elencoArray)
       }
       
     } catch (error) {
@@ -441,7 +441,7 @@ useEffect(()=>{
             {checkListPanierDimensioniView}
             {footer}
           </div>
-           :<p>&copy;2024 WM ver: 0.0.4 mobile3</p>
+           :<p>&copy;2024 WM ver: 0.0.5 mobile3</p>
             }
             
        

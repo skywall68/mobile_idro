@@ -62,7 +62,7 @@ const [operatoreYX, setOperatoreYX]= useState([]) //valori x e y di operatore
 const [pdfModificato, setPdfModificato]=useState([]) //sequenza di bytes modificati
 
   
-console.log('data dentro footer:', appData)
+//console.log('data dentro footer:', appData)
 
 
 //recupero parametri stampa:
@@ -156,7 +156,7 @@ console.log('data dentro footer:', appData)
   }
    else {
     
-    console.log('Dentro footer la data è in else:',appData, appInputValue)
+    //console.log('Dentro footer la data è in else:',appData, appInputValue)
     
     //console.log('sono dentro conferma e vediamo i dati:',listaPagina2Pj8App)
     setShowModalPrint(true)// mi apre una finestra modal quando premo tasto conferma

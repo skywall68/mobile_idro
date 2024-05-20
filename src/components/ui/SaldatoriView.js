@@ -44,7 +44,7 @@ const SaldatoriView = ({setSaldatoreSceltoApp})=>{
 
     return(
         <div className='ElencoSaldatori'>
-        <h2>Elenco saldatori:</h2>
+        <h2>Elenco saldatori</h2>
         
           <select className='select_saldatori' onChange={handleSelectChange} onClick={handleOptionClick}>
             {elencoSaldatori.map((saldatori, index) => (

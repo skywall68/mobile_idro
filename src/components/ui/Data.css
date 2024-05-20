@@ -47,15 +47,4 @@ h2 {
     margin: 20px;
 }
 
-.inputBox {
-    font-size: 15px;
-    margin: 5px;
-    text-align: center;
-    margin: 20px;
-}
-input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #f30909; /* Bordo delle opzioni */
-  }
+
