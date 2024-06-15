@@ -10,7 +10,7 @@ if (filteredData.length > 0) { // Assicurati che ci siano dati filtrati
     return data; // Ritorna la data
   } else {
     data=""
-    console.log('Nessuna data trovata per la lista specificata');
+    //console.log('Nessuna data trovata per la lista specificata');
     return data; // Ritorna "" se non ci sono dati filtrati
   }
 }

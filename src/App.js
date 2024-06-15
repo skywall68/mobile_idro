@@ -209,7 +209,7 @@ useEffect(()=>{
                             setAppElementoScelto={setAppElementoScelto}
                             />
                 } else if( sceltaModuloApp === '16pj') {
-                // console.log('in App il modulo scelto è:',sceltaModuloApp)
+                console.log('in App il valore di appElementi è:',appElementi)
                   macchineView = <MacchineView setMacchinaSceltaApp={setMacchinaSceltaApp}  />
                   checklistPj16View = <CheckListPj16View
                    setListaPagina1Pj16App={setListaPagina1Pj16App} 
@@ -441,7 +441,7 @@ useEffect(()=>{
             {checkListPanierDimensioniView}
             {footer}
           </div>
-           :<p>&copy;2024 WM ver: 0.0.5 mobile3</p>
+           :<p>&copy;2024 WM ver: 0.0.6 mobile3</p>
             }
             
        
