@@ -34,7 +34,7 @@ const CheckListPj8 = ({setSelectedPj8OrPj16}) => {
 
   return (
     <div className={ !isGreen ? 'containerPj81':'containerPj81Green'}>
-       <h2>Parametri Pj8</h2>
+       <h2>Parametri Pj8 (pj8checklistCompleto)</h2>
        <label htmlFor="fileInput"></label>
         <input id="fileInput" type="file" accept=".txt" onChange={handleFileRead} style={{fontSize:20}} />
             

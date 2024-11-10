@@ -116,13 +116,14 @@ const closeModalMio =()=>{
     
  return (
   <div className='containerCheckListCHDimensioni'>
-       <div className='bottone_check_list'></div>
+       <div className='bottone_check_list'>
        <button onClick={handleToggleTabella}>
       {mostraTabella ? 'O' : 'V'}
       </button>
+      </div>
       <div>
       { mostraTabella && (
-              <table className='tabella'>
+              <table className='tabellaCHView'>
           <thead>
               <tr>
                   <th colSpan="2"> CONTROLLI DIMENSIONI</th>
@@ -239,6 +240,7 @@ const closeModalMio =()=>{
               }
           </tbody>
        </table>
+       
        )}{/*fine mostra tabella*/}
        <ModalMio 
        showModalMio={showModalMio} 
@@ -253,7 +255,9 @@ const closeModalMio =()=>{
        elencoAzioniApp={elencoAzioniApp}
        
         /> 
+       
       </div>
+      
   </div>
 )
 }

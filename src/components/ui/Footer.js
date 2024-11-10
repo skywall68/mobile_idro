@@ -62,7 +62,7 @@ const [operatoreYX, setOperatoreYX]= useState([]) //valori x e y di operatore
 const [pdfModificato, setPdfModificato]=useState([]) //sequenza di bytes modificati
 
   
-console.log('data dentro footer:', appData)
+//console.log('data dentro footer:', appData)
 
 
 //recupero parametri stampa:
@@ -196,6 +196,7 @@ console.log('data dentro footer:', appData)
     tipologia=''
   }
 
+ 
   const opera = `${appOpera}    /`
   const plan = appPlan
   

@@ -75,16 +75,13 @@ function App() {
 function getDataItaliana() {
   // Oggetto data JavaScript per ottenere la data corrente
   const dataCorrente = new Date();
-
-  // Ottenere giorno, mese e anno dalla data corrente
+// Ottenere giorno, mese e anno dalla data corrente
   const giorno = String(dataCorrente.getDate()).padStart(2, '0');
   const mese = String(dataCorrente.getMonth() + 1).padStart(2, '0'); // +1 perché i mesi in JavaScript partono da 0
   const anno = String(dataCorrente.getFullYear()).slice(-2); // prendi solo gli ultimi due caratteri dell'anno
-
-  // Costruire la stringa della data in formato "dd/mm/yy"
+// Costruire la stringa della data in formato "dd/mm/yy"
   const dataItaliana = `${giorno}/${mese}/${anno}`;
-
-  // Restituire la data italiana
+// Restituire la data italiana
   return dataItaliana;
 }
 
@@ -379,7 +376,7 @@ useEffect(()=>{
   //console.log('In checkdimensione8:',listaPagina2Pj8App)
 
   return (
-    <div>
+    <>
     
     <div style={{display:'-ms-flexbox',position:'relative', alignItems: 'center', textAlign:'center'}}>
     {impostazioni}
@@ -441,14 +438,9 @@ useEffect(()=>{
             {checkListPanierDimensioniView}
             {footer}
           </div>
-           :<p>&copy;2024 WM ver: 0.0.6 mobile3</p>
+           :<p>&copy;2024 WM ver: 0.0.7 mobile3</p>
             }
-            
-       
-
-        
-   
-   </div>
+  </>
   );
 }
 

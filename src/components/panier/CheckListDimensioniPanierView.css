@@ -6,7 +6,7 @@
     height: 40px;
 }
 
-.tabella {
+.tabellaPanView {
     width: 100%;
     border-collapse: collapse;
     margin-top: 30px;
@@ -20,5 +20,5 @@
   }
   
   th {
-    background-color: #f7e0a4;
+    background-color: #b2c19c;
   }

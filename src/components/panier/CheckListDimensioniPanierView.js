@@ -126,7 +126,7 @@ const closeModalMio =()=>{
       </button>
       <div>
       { mostraTabella && (
-              <table className='tabella'>
+              <table className='tabellaPanView'>
           <thead>
               <tr>
                   <th colSpan="2"> CONTROLLI DIMENSIONI</th>
@@ -150,7 +150,7 @@ const closeModalMio =()=>{
               {
                 controlli.map((controllo, index)=>(
                   <tr key={controllo.id}>
-                      <td>{controllo.nomePrimario}</td>
+                      <td>{controllo.gruppo}</td>
                       <td>{controllo.nome}</td>
                       <td>{controllo.meno}</td>
                       <td>{controllo.piu}</td>

@@ -4,7 +4,7 @@
     justify-content: center;
     margin:20px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Aggiungi ombra al lato destro e in basso */
-    color:#fff;
+    color:#bbb9b9;
 }
 
 .elencoPanier {

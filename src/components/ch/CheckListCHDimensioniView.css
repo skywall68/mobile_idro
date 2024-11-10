@@ -1,31 +1,28 @@
 .containerCheckListCHDimensioni {
-  display: grid;
+  display:flex;
     
-  background-color: #dcbe0f;
+  background-color: #d3ceca;
   justify-content: center;
   
-  margin:10px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  margin-left:0px;
+  
+    margin-right: 0px;
+ 
 }
 .bottone_check_list {
  
-  background-color:#dcbe0f;
+  background-color:#828282;
   height: 40px;
 }
 
-.tabella {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-  }
+.tabellaCHView {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  margin-left:5px;
+
+  margin-right: 50px;
   
-  th, td {
-    border: 1px solid #0c0b0b;
-    padding: 8px;
-    text-align: left;
-    font-size: 14px;
-  }
+}
   
-  th {
-    background-color: #f2f7a4;
-  }
+ 
